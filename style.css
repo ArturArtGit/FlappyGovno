@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Wendy+One&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Wendy One', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #272b31;
+}
+
+canvas {
+  height: 100dvh;
+  width: min(100dvw, 60dvh);
+  background-color: #fff;
+}
+
+.box {
+  background-color: #e4bf67;
+  font-size: 6vw;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: 220px;
+  color: #38260e;
+  text-shadow: 0 10px 7px #cca352,0 -10px 1px #cca352;
+  letter-spacing: -3px;
+}
+
+h3:hover {
+  animation: glitch .35s linear infinite;
+  cursor: pointer;
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-4px, 4px);
+  }
+  40% {
+    transform: translate(-4px, -4px);
+  }
+  60% {
+    transform: translate(4px, 4px);
+  }
+  80% {
+    transform: translate(4px, -4px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
